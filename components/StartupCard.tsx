@@ -4,6 +4,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 import { Button } from './ui/button';
+import { Author, Startup } from '@/sanity/types';
+
+// The StartupTypeCard type is derived from the main Startup type,
+// but replaces the `author` field (which in the raw Sanity document is just a reference ID)
+// with a full Author object instead. 
+// This is useful when working with GROQ queries that "expand" the author reference 
+// (using `author -> { ... }`), so your frontend components can access complete author data 
+// like name, image, and bio instead of just an ID.
+
+export type StartupTypeCard = Omit<Startup, "author"> & { author ?: Author }
 
 const StartupCard = ({ post }: { post: StartupTypeCard }) => {
     const {
