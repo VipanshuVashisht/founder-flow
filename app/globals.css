@@ -187,7 +187,7 @@
 
   /* view */
   .view-container {
-    @apply flex justify-end items-center mt-5 fixed bottom-3 right-3;
+    @apply flex justify-end items-center mt-5 fixed bottom-20 right-5;
   }
 
   .view-text {
@@ -201,10 +201,10 @@
   .pattern {
     background-image: linear-gradient(
             to right,
-            transparent 49.5%,
-            rgba(251, 232, 67, 0.2) 49.5%,
-            rgba(251, 232, 67, 0.6) 50.5%,
-            transparent 50.5%
+            transparent 49%,
+            rgba(251, 232, 67, 0.2) 49%,
+            rgba(251, 232, 67, 0.6) 51%,
+            transparent 51%
     );
     background-size: 5% 100%;
     background-position: center;
